@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@asifrevz — Throttle Up. World Down. Repeat. | India</title>
-  <meta name="description" content="Asif Rahman (@asifrevz) — Digital motovlogger from India. Raw POV rides, helmet cam footage, real moments on two wheels." />
-  <meta name="keywords" content="asifrevz, motovlog, bikelife, bikersofindia, rideordie, moto vlog india, helmet cam, POV riding, Asif Rahman" />
+  <meta name="description"
+    content="Asif Rahman (@asifrevz) — Digital motovlogger from India. Raw POV rides, helmet cam footage, real moments on two wheels." />
+  <meta name="keywords"
+    content="asifrevz, motovlog, bikelife, bikersofindia, rideordie, moto vlog india, helmet cam, POV riding, Asif Rahman" />
   <meta name="author" content="Asif Rahman" />
   <link rel="canonical" href="https://asifrahman-0.github.io/asifrevz/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asifrahman-0.github.io/asifrevz/" />
   <meta property="og:title" content="@asifrevz — Throttle Up. World Down. Repeat." />
-  <meta property="og:description" content="Raw POV motovlogs from India. Night rides, black Bajaj, real moments on two wheels." />
+  <meta property="og:description"
+    content="Raw POV motovlogs from India. Night rides, black Bajaj, real moments on two wheels." />
   <meta property="og:image" content="https://asifrahman-0.github.io/asifrevz/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet" />
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --amber: #F59E0B;
       --amber-bright: #FCD34D;
-      --amber-glow: rgba(245,158,11,0.15);
+      --amber-glow: rgba(245, 158, 11, 0.15);
       --red-accent: #DC2626;
       --bg: #080808;
       --bg2: #0C0C0C;
       --bg3: #111;
       --text: #F0EDE8;
       --muted: #6B7280;
-      --border: rgba(255,255,255,0.06);
-      --border-amber: rgba(245,158,11,0.25);
+      --border: rgba(255, 255, 255, 0.06);
+      --border-amber: rgba(245, 158, 11, 0.25);
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Rajdhani', sans-serif;
@@ -49,7 +63,8 @@
     /* ─── CURSOR ─── */
     .cursor {
       position: fixed;
-      width: 12px; height: 12px;
+      width: 12px;
+      height: 12px;
       background: var(--amber);
       border-radius: 50%;
       pointer-events: none;
@@ -58,17 +73,22 @@
       transition: transform 0.15s ease;
       transform: translate(-50%, -50%);
     }
+
     .cursor-ring {
       position: fixed;
-      width: 40px; height: 40px;
-      border: 1px solid rgba(245,158,11,0.5);
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(245, 158, 11, 0.5);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9998;
       transition: all 0.3s ease;
       transform: translate(-50%, -50%);
     }
-    body:hover .cursor { opacity: 1; }
+
+    body:hover .cursor {
+      opacity: 1;
+    }
 
     /* ─── GRAIN OVERLAY ─── */
     body::after {
@@ -84,7 +104,9 @@
     /* ─── NAV ─── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       padding: 1.5rem 2.5rem;
       display: flex;
@@ -92,13 +114,15 @@
       justify-content: space-between;
       mix-blend-mode: normal;
     }
+
     nav::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(8,8,8,0.9) 0%, transparent 100%);
+      background: linear-gradient(to bottom, rgba(8, 8, 8, 0.9) 0%, transparent 100%);
       pointer-events: none;
     }
+
     .nav-logo {
       font-family: 'Anton', sans-serif;
       font-size: 1.6rem;
@@ -108,7 +132,11 @@
       z-index: 1;
       text-decoration: none;
     }
-    .nav-logo span { color: var(--amber); }
+
+    .nav-logo span {
+      color: var(--amber);
+    }
+
     .nav-right {
       position: relative;
       z-index: 1;
@@ -116,6 +144,7 @@
       align-items: center;
       gap: 2rem;
     }
+
     .nav-tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem;
@@ -123,6 +152,7 @@
       text-transform: uppercase;
       color: var(--muted);
     }
+
     .nav-ig {
       display: flex;
       align-items: center;
@@ -136,8 +166,16 @@
       padding: 0.4rem 0.9rem;
       transition: all 0.25s;
     }
-    .nav-ig:hover { background: var(--amber); color: #000; }
-    .nav-ig svg { width: 14px; height: 14px; }
+
+    .nav-ig:hover {
+      background: var(--amber);
+      color: #000;
+    }
+
+    .nav-ig svg {
+      width: 14px;
+      height: 14px;
+    }
 
     /* ─── HERO ─── */
     .hero {
@@ -148,39 +186,80 @@
       align-items: flex-end;
       overflow: hidden;
     }
+
     .hero-bg {
       position: absolute;
       inset: 0;
       will-change: transform;
     }
+
     .hero-bg img {
       width: 100%;
       height: 115%;
       object-fit: cover;
       object-position: center 30%;
     }
+
     .hero-vignette {
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, transparent 25%, transparent 50%, rgba(8,8,8,0.85) 85%, #080808 100%),
-        linear-gradient(to right, rgba(8,8,8,0.4) 0%, transparent 40%);
+        linear-gradient(to bottom, rgba(8, 8, 8, 0.3) 0%, transparent 25%, transparent 50%, rgba(8, 8, 8, 0.85) 85%, #080808 100%),
+        linear-gradient(to right, rgba(8, 8, 8, 0.4) 0%, transparent 40%);
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg img {
+        object-position: 30% 30%;
+      }
+
+      .hero-content {
+        padding: 0 1.25rem 3.5rem;
+      }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-tag {
+        display: none;
+      }
+
+      nav {
+        padding: 1rem 1.25rem;
+      }
     }
 
     /* Amber scan line */
     .hero-scanline {
       position: absolute;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--amber), transparent);
       animation: scan 6s ease-in-out infinite;
       opacity: 0.6;
     }
+
     @keyframes scan {
-      0% { top: 20%; opacity: 0; }
-      10% { opacity: 0.6; }
-      90% { opacity: 0.6; }
-      100% { top: 85%; opacity: 0; }
+      0% {
+        top: 20%;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.6;
+      }
+
+      90% {
+        opacity: 0.6;
+      }
+
+      100% {
+        top: 85%;
+        opacity: 0;
+      }
     }
 
     .hero-content {
@@ -198,11 +277,13 @@
       opacity: 0;
       animation: slideUp 0.8s ease 0.2s forwards;
     }
+
     .hero-eyebrow-line {
       width: 40px;
       height: 1px;
       background: var(--amber);
     }
+
     .hero-eyebrow-text {
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem;
@@ -221,15 +302,26 @@
       opacity: 0;
       animation: heroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
     }
+
     .hero-h1 .outline {
-      -webkit-text-stroke: 2px rgba(255,255,255,0.25);
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.25);
       color: transparent;
     }
-    .hero-h1 .amber { color: var(--amber); }
+
+    .hero-h1 .amber {
+      color: var(--amber);
+    }
 
     @keyframes heroReveal {
-      from { opacity: 0; transform: translateY(60px) skewY(2deg); }
-      to   { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(60px) skewY(2deg);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     .hero-bottom {
@@ -242,13 +334,18 @@
       opacity: 0;
       animation: slideUp 0.8s ease 0.7s forwards;
     }
+
     .hero-tagline {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(1.2rem, 3vw, 2rem);
       letter-spacing: 0.3em;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
     }
-    .hero-tagline strong { color: var(--amber); }
+
+    .hero-tagline strong {
+      color: var(--amber);
+    }
+
     .hero-scroll-hint {
       display: flex;
       flex-direction: column;
@@ -260,17 +357,36 @@
       color: var(--muted);
       text-transform: uppercase;
     }
+
     .scroll-line {
       width: 1px;
       height: 50px;
       background: linear-gradient(to bottom, var(--amber), transparent);
       animation: scrollPulse 2s ease-in-out infinite;
     }
-    @keyframes scrollPulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    @keyframes scrollPulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.2
+      }
+    }
 
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* ─── TICKER ─── */
@@ -280,12 +396,14 @@
       overflow: hidden;
       position: relative;
     }
+
     .ticker-inner {
       display: flex;
       gap: 0;
       white-space: nowrap;
       animation: ticker 20s linear infinite;
     }
+
     .ticker-item {
       display: flex;
       align-items: center;
@@ -296,15 +414,23 @@
       letter-spacing: 0.15em;
       color: #000;
     }
+
     .ticker-dot {
-      width: 4px; height: 4px;
-      background: rgba(0,0,0,0.4);
+      width: 4px;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.4);
       border-radius: 50%;
       flex-shrink: 0;
     }
+
     @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     /* ─── QUOTE ─── */
@@ -314,6 +440,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .quote-section::before {
       content: '"';
       position: absolute;
@@ -321,16 +448,18 @@
       left: -1rem;
       font-family: 'Anton', sans-serif;
       font-size: 30vw;
-      color: rgba(245,158,11,0.04);
+      color: rgba(245, 158, 11, 0.04);
       line-height: 1;
       pointer-events: none;
     }
+
     .quote-inner {
       max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
+
     .quote-tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
@@ -342,7 +471,14 @@
       align-items: center;
       gap: 1rem;
     }
-    .quote-tag::after { content: ''; flex: 1; height: 1px; background: var(--border-amber); }
+
+    .quote-tag::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-amber);
+    }
+
     blockquote {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.5rem, 7vw, 5.5rem);
@@ -350,7 +486,11 @@
       line-height: 1.1;
       letter-spacing: 0.05em;
     }
-    blockquote em { color: var(--amber); font-style: normal; }
+
+    blockquote em {
+      color: var(--amber);
+      font-style: normal;
+    }
 
     /* ─── ABOUT ─── */
     .about-section {
@@ -358,6 +498,7 @@
       background: var(--bg2);
       position: relative;
     }
+
     .about-grid {
       display: grid;
       grid-template-columns: 5fr 7fr;
@@ -366,18 +507,28 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
 
     .about-img-wrap {
       position: relative;
     }
+
     .about-img-frame {
       position: absolute;
-      top: 16px; right: -16px;
-      bottom: -16px; left: 16px;
+      top: 16px;
+      right: -16px;
+      bottom: -16px;
+      left: 16px;
       border: 1px solid var(--border-amber);
       z-index: 0;
     }
+
     .about-img-wrap img {
       position: relative;
       z-index: 1;
@@ -389,7 +540,11 @@
       filter: grayscale(20%);
       transition: filter 0.4s;
     }
-    .about-img-wrap:hover img { filter: grayscale(0%); }
+
+    .about-img-wrap:hover img {
+      filter: grayscale(0%);
+    }
+
     .about-img-tag {
       position: absolute;
       bottom: -1px;
@@ -404,6 +559,7 @@
       padding: 0.4rem 0.8rem;
       z-index: 2;
     }
+
     .about-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
@@ -415,7 +571,12 @@
       align-items: center;
       gap: 0.75rem;
     }
-    .about-label::before { content: '//'; opacity: 0.5; }
+
+    .about-label::before {
+      content: '//';
+      opacity: 0.5;
+    }
+
     .about-name {
       font-family: 'Anton', sans-serif;
       font-size: clamp(3.5rem, 9vw, 7rem);
@@ -423,6 +584,7 @@
       line-height: 0.9;
       margin-bottom: 0.5rem;
     }
+
     .about-handle {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -430,16 +592,18 @@
       letter-spacing: 0.15em;
       margin-bottom: 2rem;
     }
+
     .about-desc {
       font-size: 1.1rem;
       line-height: 1.85;
-      color: rgba(240,237,232,0.65);
+      color: rgba(240, 237, 232, 0.65);
       margin-bottom: 2.5rem;
       font-weight: 500;
       max-width: 500px;
       border-left: 2px solid var(--border-amber);
       padding-left: 1.25rem;
     }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -447,22 +611,33 @@
       border: 1px solid var(--border);
       margin-bottom: 2.5rem;
     }
+
     .stat {
       padding: 1.25rem;
       border-right: 1px solid var(--border);
       position: relative;
     }
-    .stat:last-child { border-right: none; }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
     .stat::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: var(--amber);
       transform: scaleX(0);
       transition: transform 0.4s ease;
     }
-    .stat:hover::before { transform: scaleX(1); }
+
+    .stat:hover::before {
+      transform: scaleX(1);
+    }
+
     .stat-num {
       font-family: 'Anton', sans-serif;
       font-size: 2.5rem;
@@ -470,6 +645,7 @@
       line-height: 1;
       margin-bottom: 0.25rem;
     }
+
     .stat-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.55rem;
@@ -477,6 +653,7 @@
       text-transform: uppercase;
       color: var(--muted);
     }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -492,7 +669,12 @@
       transition: all 0.25s;
       clip-path: polygon(0 0, 100% 0, 100% 75%, 97% 100%, 0 100%);
     }
-    .btn-primary svg { width: 18px; height: 18px; }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+    }
+
     .btn-primary:hover {
       background: #fff;
       transform: translateY(-2px);
@@ -504,6 +686,7 @@
       height: 40%;
       overflow: hidden;
     }
+
     .img-break img {
       width: 100%;
       height: 100%;
@@ -511,13 +694,15 @@
       object-position: center 20%;
       transition: transform 0.1s;
     }
+
     .img-break-overlay {
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to right, rgba(8,8,8,0.7) 0%, transparent 60%),
-        linear-gradient(to bottom, transparent 40%, rgba(8,8,8,0.9) 100%);
+        linear-gradient(to right, rgba(8, 8, 8, 0.7) 0%, transparent 60%),
+        linear-gradient(to bottom, transparent 40%, rgba(8, 8, 8, 0.9) 100%);
     }
+
     .img-break-content {
       position: absolute;
       inset: 0;
@@ -526,6 +711,7 @@
       justify-content: flex-end;
       padding: 4rem 2.5rem;
     }
+
     .img-break-quote {
       font-family: 'Anton', sans-serif;
       font-size: clamp(2.5rem, 8vw, 7rem);
@@ -533,11 +719,16 @@
       line-height: 0.92;
       max-width: 700px;
     }
+
     .img-break-quote .line2 {
-      -webkit-text-stroke: 1px rgba(255,255,255,0.4);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
       color: transparent;
     }
-    .img-break-quote .line3 { color: var(--amber); }
+
+    .img-break-quote .line3 {
+      color: var(--amber);
+    }
+
     .img-break-meta {
       margin-top: 1.5rem;
       font-family: 'Space Mono', monospace;
@@ -554,6 +745,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .machine-section::before {
       content: 'MACHINE';
       position: absolute;
@@ -562,11 +754,12 @@
       transform: translateY(-50%) rotate(90deg);
       font-family: 'Anton', sans-serif;
       font-size: 15vw;
-      color: rgba(255,255,255,0.02);
+      color: rgba(255, 255, 255, 0.02);
       letter-spacing: 0.1em;
       pointer-events: none;
       white-space: nowrap;
     }
+
     .machine-grid {
       display: grid;
       grid-template-columns: 6fr 5fr;
@@ -575,23 +768,34 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     @media (max-width: 900px) {
-      .machine-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .machine-grid .machine-img-col { order: -1; }
+      .machine-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .machine-grid .machine-img-col {
+        order: -1;
+      }
     }
+
     .machine-img-col {
       position: relative;
     }
+
     .machine-img-main {
       position: relative;
       z-index: 1;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
+
     .machine-img-main img {
       width: 100%;
       display: block;
       filter: contrast(1.1) saturate(0.85);
     }
+
     .machine-img-badge {
       position: absolute;
       top: 1.5rem;
@@ -604,10 +808,13 @@
       padding: 0.3rem 0.8rem;
       z-index: 2;
     }
+
     .machine-img-corner {
       position: absolute;
-      bottom: -12px; right: -12px;
-      width: 80px; height: 80px;
+      bottom: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
       border-right: 2px solid var(--amber);
       border-bottom: 2px solid var(--amber);
       z-index: 0;
@@ -624,7 +831,12 @@
       align-items: center;
       gap: 0.75rem;
     }
-    .machine-eyebrow::before { content: '01'; color: var(--muted); }
+
+    .machine-eyebrow::before {
+      content: '01';
+      color: var(--muted);
+    }
+
     .machine-title {
       font-family: 'Anton', sans-serif;
       font-size: clamp(3rem, 7vw, 5.5rem);
@@ -632,24 +844,28 @@
       line-height: 0.92;
       margin-bottom: 1.5rem;
     }
+
     .machine-title .outline {
-      -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
       color: transparent;
     }
+
     .machine-desc {
       font-size: 1.05rem;
       line-height: 1.85;
-      color: rgba(240,237,232,0.55);
+      color: rgba(240, 237, 232, 0.55);
       max-width: 460px;
       margin-bottom: 2.5rem;
       font-weight: 500;
     }
+
     .tags-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 2.5rem;
     }
+
     .tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem;
@@ -659,10 +875,12 @@
       padding: 0.35rem 0.8rem;
       transition: all 0.2s;
     }
+
     .tag:hover {
       border-color: var(--amber);
       color: var(--amber);
     }
+
     .machine-specs {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -670,11 +888,13 @@
       padding-top: 2rem;
       border-top: 1px solid var(--border);
     }
+
     .spec {
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
     }
+
     .spec-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.55rem;
@@ -682,6 +902,7 @@
       text-transform: uppercase;
       color: var(--muted);
     }
+
     .spec-value {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.1rem;
@@ -697,6 +918,7 @@
       padding: 8rem 2.5rem;
       text-align: center;
     }
+
     .cta-bg-text {
       position: absolute;
       inset: 0;
@@ -705,13 +927,18 @@
       justify-content: center;
       font-family: 'Anton', sans-serif;
       font-size: clamp(8rem, 22vw, 18rem);
-      color: rgba(245,158,11,0.05);
+      color: rgba(245, 158, 11, 0.05);
       letter-spacing: -0.02em;
       text-transform: uppercase;
       pointer-events: none;
       line-height: 1;
     }
-    .cta-inner { position: relative; z-index: 1; }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
     .cta-eyebrow {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
@@ -720,6 +947,7 @@
       color: var(--amber);
       margin-bottom: 1.5rem;
     }
+
     .cta-title {
       font-family: 'Anton', sans-serif;
       font-size: clamp(4rem, 14vw, 11rem);
@@ -727,11 +955,16 @@
       line-height: 0.9;
       margin-bottom: 2rem;
     }
-    .cta-title .line1 { color: #fff; }
+
+    .cta-title .line1 {
+      color: #fff;
+    }
+
     .cta-title .line2 {
       -webkit-text-stroke: 2px var(--amber);
       color: transparent;
     }
+
     .cta-sub {
       font-size: 1.1rem;
       color: var(--muted);
@@ -740,6 +973,7 @@
       line-height: 1.7;
       font-weight: 500;
     }
+
     .btn-cta {
       display: inline-flex;
       align-items: center;
@@ -757,6 +991,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .btn-cta::before {
       content: '';
       position: absolute;
@@ -766,9 +1001,19 @@
       transition: transform 0.3s ease;
       z-index: -1;
     }
-    .btn-cta:hover { color: #000; }
-    .btn-cta:hover::before { transform: translateX(0); }
-    .btn-cta svg { width: 22px; height: 22px; }
+
+    .btn-cta:hover {
+      color: #000;
+    }
+
+    .btn-cta:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn-cta svg {
+      width: 22px;
+      height: 22px;
+    }
 
     /* ─── FOOTER ─── */
     footer {
@@ -776,10 +1021,12 @@
       position: relative;
       overflow: hidden;
     }
+
     .footer-top-stripe {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, var(--amber) 30%, var(--amber) 70%, transparent 100%);
     }
+
     .footer-glow {
       position: absolute;
       bottom: -50px;
@@ -787,9 +1034,10 @@
       transform: translateX(-50%);
       width: 800px;
       height: 300px;
-      background: radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(245, 158, 11, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
+
     .footer-body {
       max-width: 1200px;
       margin: 0 auto;
@@ -797,22 +1045,28 @@
       position: relative;
       z-index: 1;
     }
+
     .footer-hero-text {
       text-align: center;
       margin-bottom: 5rem;
       position: relative;
     }
+
     .footer-ghost-word {
       font-family: 'Anton', sans-serif;
       font-size: clamp(5rem, 18vw, 12rem);
       text-transform: uppercase;
       line-height: 1;
       color: transparent;
-      -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
       letter-spacing: -0.02em;
       display: block;
     }
-    .footer-ghost-word span { -webkit-text-stroke-color: rgba(245,158,11,0.08); }
+
+    .footer-ghost-word span {
+      -webkit-text-stroke-color: rgba(245, 158, 11, 0.08);
+    }
+
     .footer-tagline {
       position: absolute;
       bottom: 0.5rem;
@@ -825,6 +1079,7 @@
       color: var(--amber);
       white-space: nowrap;
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1.5fr 1.5fr;
@@ -834,7 +1089,14 @@
       border-bottom: 1px solid var(--border);
       margin-bottom: 2rem;
     }
-    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
     .footer-col-title {
       font-family: 'Space Mono', monospace;
       font-size: 0.55rem;
@@ -845,18 +1107,27 @@
       padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--border-amber);
     }
+
     .footer-name {
       font-family: 'Anton', sans-serif;
       font-size: 2.5rem;
       text-transform: uppercase;
       margin-bottom: 0.25rem;
     }
+
     .footer-desc {
       font-size: 0.9rem;
       line-height: 1.75;
       color: var(--muted);
     }
-    .footer-quotes { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .footer-quotes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
     .footer-quotes li {
       font-size: 0.9rem;
       color: var(--muted);
@@ -865,15 +1136,17 @@
       border-left: 1px solid var(--border);
       font-style: italic;
     }
+
     .footer-quotes li.featured {
       border-left-color: var(--amber);
-      color: rgba(240,237,232,0.8);
+      color: rgba(240, 237, 232, 0.8);
     }
+
     .footer-link {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      color: rgba(240,237,232,0.6);
+      color: rgba(240, 237, 232, 0.6);
       text-decoration: none;
       font-size: 0.9rem;
       padding: 0.65rem 0;
@@ -881,11 +1154,34 @@
       transition: color 0.2s;
       font-weight: 600;
     }
-    .footer-link:last-of-type { border-bottom: none; }
-    .footer-link:hover { color: var(--amber); }
-    .footer-link svg { width: 16px; height: 16px; flex-shrink: 0; }
-    .footer-link-arrow { margin-left: auto; width: 14px; height: 14px; opacity: 0; transition: opacity 0.2s, transform 0.2s; }
-    .footer-link:hover .footer-link-arrow { opacity: 1; transform: translateX(3px); }
+
+    .footer-link:last-of-type {
+      border-bottom: none;
+    }
+
+    .footer-link:hover {
+      color: var(--amber);
+    }
+
+    .footer-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .footer-link-arrow {
+      margin-left: auto;
+      width: 14px;
+      height: 14px;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .footer-link:hover .footer-link-arrow {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
     .footer-bottom {
       display: flex;
       align-items: center;
@@ -895,32 +1191,96 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
-      color: rgba(107,114,128,0.6);
+      color: rgba(107, 114, 128, 0.6);
     }
-    .footer-bottom .rev { color: rgba(245,158,11,0.4); text-transform: uppercase; letter-spacing: 0.25em; }
+
+    .footer-bottom .rev {
+      color: rgba(245, 158, 11, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+    }
 
     /* ─── REVEAL ─── */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
-    .reveal.in { opacity: 1; transform: none; }
-    .reveal-l { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s ease, transform 0.9s ease; }
-    .reveal-l.in { opacity: 1; transform: none; }
-    .reveal-r { opacity: 0; transform: translateX(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
-    .reveal-r.in { opacity: 1; transform: none; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-l {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal-l.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-r {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal-r.in {
+      opacity: 1;
+      transform: none;
+    }
 
     /* ─── MOBILE ─── */
     @media (max-width: 640px) {
-      nav { padding: 1.25rem 1.5rem; }
-      .nav-tag { display: none; }
-      .hero-content { padding: 0 1.5rem 4rem; }
-      .about-section, .machine-section, .quote-section, .cta-section { padding: 5rem 1.5rem; }
-      .about-desc { max-width: 100%; }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-      .stats-grid .stat:nth-child(3) { grid-column: span 2; }
-      .footer-tagline { position: static; transform: none; margin-top: 0.5rem; display: block; }
-      .footer-body { padding: 3rem 1.5rem 2rem; }
+      nav {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .nav-tag {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 0 1.5rem 4rem;
+      }
+
+      .about-section,
+      .machine-section,
+      .quote-section,
+      .cta-section {
+        padding: 5rem 1.5rem;
+      }
+
+      .about-desc {
+        max-width: 100%;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats-grid .stat:nth-child(3) {
+        grid-column: span 2;
+      }
+
+      .footer-tagline {
+        position: static;
+        transform: none;
+        margin-top: 0.5rem;
+        display: block;
+      }
+
+      .footer-body {
+        padding: 3rem 1.5rem 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="cursor" id="cursor"></div>
@@ -932,7 +1292,10 @@
     <div class="nav-right">
       <span class="nav-tag">India · Motovlog</span>
       <a href="https://www.instagram.com/asifrevz" target="_blank" rel="noopener noreferrer" class="nav-ig">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
         Follow
       </a>
     </div>
@@ -1030,7 +1393,10 @@
           </div>
         </div>
         <a href="https://www.instagram.com/asifrevz" target="_blank" rel="noopener noreferrer" class="btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
           Follow the Ride
         </a>
       </div>
@@ -1112,9 +1478,13 @@
         <span class="line1">Join the</span><br>
         <span class="line2">Vibe.</span>
       </h2>
-      <p class="cta-sub">More than videos. Real moments, real speed, real life on two wheels. Follow the journey before the next ride drops.</p>
+      <p class="cta-sub">More than videos. Real moments, real speed, real life on two wheels. Follow the journey before
+        the next ride drops.</p>
       <a href="https://www.instagram.com/asifrevz" target="_blank" rel="noopener noreferrer" class="btn-cta">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
         @asifrevz
       </a>
     </div>
@@ -1134,7 +1504,8 @@
         <div>
           <p class="footer-col-title">Who</p>
           <p class="footer-name">Asif Rahman</p>
-          <p class="footer-desc">Digital creator from India.<br>Night rider. Black Bajaj. Helmet always on.<br>This is raw. This is real.</p>
+          <p class="footer-desc">Digital creator from India.<br>Night rider. Black Bajaj. Helmet always on.<br>This is
+            raw. This is real.</p>
         </div>
         <div>
           <p class="footer-col-title">Vibe Check</p>
@@ -1148,9 +1519,14 @@
         <div>
           <p class="footer-col-title">Find Me</p>
           <a href="https://www.instagram.com/asifrevz" target="_blank" rel="noopener noreferrer" class="footer-link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
             Instagram · @asifrevz
-            <svg class="footer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="footer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1209,4 +1585,5 @@
     document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => obs.observe(el));
   </script>
 </body>
+
 </html>
